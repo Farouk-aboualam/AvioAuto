@@ -13,5 +13,10 @@ class Supplier(models.Model):
         return self.name
 
 
-# Product
-    # has supplier, price, description
+class Product(models.Model):
+    supplier = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.description
