@@ -58,7 +58,7 @@ ROOT_URLCONF = 'AvioAuto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,3 +131,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 AUTH_USER_MODEL = 'home.CustomUser'  # Replace 'appname' with your app's name
+
+
+
+LOGIN_REDIRECT_URL = "/home"
